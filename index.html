@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Van Gogh</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Anton|Oxygen" rel="stylesheet">
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li><a href=".html">CONTACT</a></li>
+        <li><a href="index.html">ABOUT</a></li>
+        <li><a href="index.html">HOME</a></li>
+        <img src="imagenes/logo.png" height="60px" width="120px">
+    </ul>
+</div>
+<!-- <div class="w3-content w3-display-container">
+  <img class="mySlides" src="imagenes/imagen1.jpg" style="width:100%">
+</div>
+ -->
+ <blockquote id="randomquote">
+  	<img class="mySlides" src="imagenes/imagen1.jpg">
+  	<div class="blockquote-text">
+	    <p></p>
+	    <cite></cite>
+	</div>
+</blockquote>
+<script>
+	var myQuotes = [{
+    quote: "It is good to love many things, for therein lies the true strength, and whosoever loves much performs much, and can accomplish much, and what is done in love is well done.",
+    cite: "Vincent Van Gogh",
+}, {
+    quote: "I dream my painting and I paint my dream.",
+    cite: "Vincent van Gogh",
+}, {
+    quote: "Be clearly aware of the stars and infinity on high. Then life seems almost enchanted after all.",
+    cite: "Vincent Van Gogh",
+}];
+
+var randomQuote = Math.floor(Math.random() * myQuotes.length)
+
+$('p', '#randomquote').text(myQuotes[randomQuote].quote);
+$('cite', '#randomquote').attr('href', myQuotes[randomQuote].url).text("" + myQuotes[randomQuote].cite);
+</script>                      
+<script src=”js/script.js”></script>
+</body>
+</html>
